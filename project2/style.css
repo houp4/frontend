@@ -1,0 +1,251 @@
+body {
+    margin: 5px auto;
+    font-family: Arial, sans-serif;
+    width: 95%;
+}
+
+.header {
+    border: lightgray 2px solid;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 auto 5px auto;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 24px;
+    color: #1E90FF;
+    float: left;
+    margin: 0 0 0 20px;
+    line-height: 50px; 
+    white-space: nowrap;
+}
+
+.menu {
+    float: right;
+    margin: 15px 5px 0 0;
+    white-space: nowrap;
+} 
+
+.menu a {
+    display: inline;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+.menu .currect_menu {
+    background-color: #1E90FF;
+    color: white;
+}
+
+.album {
+    height: 300px;
+    font-size: 0;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.column { 
+    width: 33.3%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.big_img_alb,
+.small_img_alb {
+    width: 100%;
+    display: block;
+}    
+
+.big_img_alb {
+    height: 150px;
+}
+
+.small_img_alb {
+    height: 100px;
+}
+
+.info_block {
+    margin-bottom: 50px;
+}
+
+.small_info_block {
+    float: left;
+    width: 31%;
+    margin: 0;
+    display: block;
+}
+
+.big_info_block {
+    float: right;
+    width: 67%;
+    display: block;
+
+}
+
+.right_part_small_info_block,
+.left_part_small_info_block {
+    width: 100%;
+    margin-bottom: 15px;
+    /* height: 300px; */
+}
+
+.right_part_small_info_block img,
+.left_part_small_info_block img {
+    height: 100%; 
+    width: 40%;
+}
+
+.right_part_small_info_block img {
+    float: right;
+}
+
+.left_part_small_info_block img {
+    float: left;
+}
+
+.right_text_container_small_info_block,
+.left_text_container_small_info_block {
+    width: 50%;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.right_text_container_small_info_block h3,
+.left_text_container_small_info_block h3 {
+    vertical-align: top;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+.right_text_container_small_info_block h3,
+.right_text_container_small_info_block a {
+    text-align: right;
+    float: right;
+}
+
+.left_text_container_small_info_block h3,
+.left_text_container_small_info_block a {
+    text-align: left;
+    float: left;
+}
+
+.right_text_container_small_info_block a,
+.left_text_container_small_info_block a {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    color: black;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.right_text_container_small_info_block p,
+.left_text_container_small_info_block p {
+    width: 100%;    
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.up_part_big_info_block,
+.down_part_big_info_block {
+    border: black thin solid;
+    width: 100%;
+    display: block;
+}
+
+.up_part_big_info_block {
+    margin-bottom: 11px;
+}
+
+.up_part_big_info_block img { 
+    float: right;
+    width: 38%;
+}
+
+.down_part_big_info_block img {
+    float: left;
+    width: 40%;;
+}
+
+.up_text_container_big_info_block,
+.down_text_container_big_info_block {
+    width: 60%;
+    display: inline-block;
+}
+
+.up_text_container_big_info_block h3 {
+    vertical-align: top;
+    width: 100%;
+    text-align: right;
+}
+
+.up_text_container_big_info_block p {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.up_text_container_big_info_block a {
+    display: block;
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    border: black 2px solid;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 5px 15px;
+    width: auto;
+}
+
+.down_part_big_info_block h3 {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.down_text_container_big_info_block p {
+    text-align: left;
+    margin-left: 30px;
+
+}
+
+.down_text_container_big_info_block a {
+    display: block;
+    float: left;
+    text-align: center;
+    border: black 2px solid;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    padding: 5px 15px;
+    width: auto;
+}
+
+footer {
+    border-top: lightgray thin solid;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 100px; 
+    clear: both;
+}
+
+.big_info_block span {
+    display: block;
+    margin-bottom: 5px;
+    float: none;
+}
+
+
