@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+    <title>АвтоРейтинг - Список лучших машин</title>
+</head>
+<body>
+
+  <h1 align="center">АвтоРейтинг</h1>
+  <hr width="100%" size="2" color="gray">
+
+  <ul type="circle">
+    <li><a href="index.html"><font size="4">Главная</font></a></li>
+    <li><a href="ratings.html"><font size="4">Список лучших машин</font></a></li>
+  </ul>
+  <hr width="100%" size="2" color="gray">
+
+  <h2 align="center">Рейтинг автомобилей</h2>
+
+  <details>
+    <summary><b>График</b></summary>
+    <form id="chart-form">
+      <b>Значение по оси ОХ</b><br>
+      <label><input type="radio" name="x_axis" value="type" id="x_axis_type"> Тип</label><br>
+      <label><input type="radio" name="x_axis" value="country" id="x_axis_country"> Страна</label><br>
+      <label><input type="radio" name="x_axis" value="year" id="x_axis_year"> Год</label><br><br>
+      
+      <b>Результат</b><br>
+      <label><input type="checkbox" name="min_power" value="min_power_chart" id="min_power_chart">Минимальная мощность</label><br>
+      <label><input type="checkbox" name="avg_power" value="avg_power_chart" id="avg_power_chart">Средняя мощность</label><br>
+      <label><input type="checkbox" name="max_power" value="max_power_chart" id="max_power_chart">Максимальная мощность</label><br>
+      <label><input type="checkbox" name="avg_rating" value="avg_rating_chart" id="avg_rating_chart">Средний рейтинг</label><br><br>
+      
+      <input type="submit" value="Построить" id="build_chart">
+    </form>
+
+    Здесь будет график
+    
+  </details>
+
+  <details>
+    <summary><b>Фильтр</b></summary>
+    <form id="filter-form">
+      <label for="name">Название:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+      
+      <label for="type">Тип:</label><br>
+      <select id="type" name="type">
+        <option value="">Все</option>
+        <option value="седан">Седан</option>
+        <option value="внедорожник">Внедорожник</option>
+        <option value="хэтчбек">Хэтчбек</option>
+        <option value="кроссовер">Кроссовер</option>
+      </select><br><br>
+      
+      <label for="country">Страна:</label><br>
+      <select id="country" name="country">
+        <option value="">Все</option>
+        <option value="Япония">Япония</option>
+        <option value="Корея">Корея</option>
+        <option value="Германия">Германия</option>
+        <option value="США">США</option>
+        <option value="Россия">Россия</option>
+      </select><br><br>
+      
+      <label for="city">Город:</label><br>
+      <input type="text" id="city" name="city"><br><br>
+      
+      Год:<br>
+      <label>от <input type="number" name="year_from" id="year_from"></label>
+      <label>до <input type="number" name="year_to" id="year_to"></label><br><br>
+      
+      Мощность:<br>
+      <label>от <input type="number" name="power_from" id="power_from"></label> 
+      <label>до <input type="number" name="power_to" id="power_to"></label><br><br>
+      
+      <input type="submit" value="Найти" id="find_submit">
+    </form>
+  </details>
+
+<details>
+  <summary><b>Сортировка</b></summary>
+    <form id="sort-form">
+      <label for="sort1">Первый уровень:</label><br>
+      <select id="sort1" name="sort1">
+        <option value="">Нет</option>
+        <option value="model">Модель</option>
+        <option value="type">Тип кузова</option>
+        <option value="country">Страна</option>
+        <option value="drive">Привод</option>
+        <option value="power">Мощность (л.с.)</option>
+        <option value="consumption">Расход (л/100км)</option>
+        <option value="price">Цена (руб)</option>
+        <option value="rating">Рейтинг</option>
+      </select>
+      <label><input type="checkbox" name="desc1" id="desc1"> по убыванию?</label><br><br>
+      
+      <label for="sort2">Второй уровень:</label><br>
+      <select id="sort2" name="sort2">
+        <option value="">Нет</option>
+        <option value="model">Модель</option>
+        <option value="type">Тип кузова</option>
+        <option value="country">Страна</option>
+        <option value="drive">Привод</option>
+        <option value="power">Мощность (л.с.)</option>
+        <option value="consumption">Расход (л/100км)</option>
+        <option value="price">Цена (руб)</option>
+        <option value="rating">Рейтинг</option>
+      </select>
+      <label><input type="checkbox" name="desc2" id="desc2"> по убыванию?</label><br><br>
+      
+      <label for="sort3">Третий уровень:</label><br>
+      <select id="sort3" name="sort3">
+        <option value="">Нет</option>
+        <option value="model">Модель</option>
+        <option value="type">Тип кузова</option>
+        <option value="country">Страна</option>
+        <option value="drive">Привод</option>
+        <option value="power">Мощность (л.с.)</option>
+        <option value="consumption">Расход (л/100км)</option>
+        <option value="price">Цена (руб)</option>
+        <option value="rating">Рейтинг</option>
+      </select>
+      <label><input type="checkbox" name="desc3" id="desc3"> по убыванию?</label><br><br>
+      
+      <input type="submit" value="Сортировать" id="sort_submit">
+    </form>
+  </details>
+
+  <hr width="100%" size="2" color="gray">
+
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <tr bgcolor="#f0f0f0">
+      <th>Модель</th>
+      <th>Тип кузова</th>
+      <th>Страна</th>
+      <th>Привод</th>
+      <th>Мощность (л.с.)</th>
+      <th>Расход (л/100км)</th>
+      <th>Цена (руб)</th>
+      <th>Рейтинг</th>
+    </tr>
+    <tr><td>Toyota Yaris Cross</td><td>Кроссовер</td><td>Япония</td><td>передний</td><td>116</td><td>3.8</td><td>2100000</td><td>4.8</td></tr>
+    <tr><td>Kia Rio</td><td>Седан</td><td>Корея</td><td>передний</td><td>100</td><td>6.2</td><td>1350000</td><td>4.5</td></tr>
+    <tr><td>Hyundai Solaris</td><td>Седан</td><td>Корея</td><td>передний</td><td>100</td><td>6.1</td><td>1400000</td><td>4.5</td></tr>
+    <tr><td>Toyota Camry</td><td>Седан</td><td>Япония</td><td>передний</td><td>249</td><td>7.8</td><td>3200000</td><td>4.7</td></tr>
+    <tr><td>Honda Civic</td><td>Седан</td><td>Япония</td><td>передний</td><td>182</td><td>6.5</td><td>2800000</td><td>4.6</td></tr>
+    <tr><td>Toyota Land Cruiser</td><td>Внедорожник</td><td>Япония</td><td>полный</td><td>409</td><td>11.5</td><td>7800000</td><td>4.9</td></tr>
+    <tr><td>Volkswagen Golf</td><td>Хэтчбек</td><td>Германия</td><td>передний</td><td>150</td><td>5.9</td><td>2500000</td><td>4.6</td></tr>
+    <tr><td>Honda Accord</td><td>Седан</td><td>Япония</td><td>передний</td><td>192</td><td>6.8</td><td>3500000</td><td>4.7</td></tr>
+    <tr><td>Skoda Octavia</td><td>Седан</td><td>Чехия</td><td>передний</td><td>150</td><td>6.0</td><td>2300000</td><td>4.5</td></tr>
+    <tr><td>Mazda CX-5</td><td>Кроссовер</td><td>Япония</td><td>полный</td><td>194</td><td>7.2</td><td>3100000</td><td>4.6</td></tr>
+    <tr><td>Nissan Qashqai</td><td>Кроссовер</td><td>Япония</td><td>передний</td><td>140</td><td>6.5</td><td>2700000</td><td>4.4</td></tr>
+    <tr><td>BMW 3 Series</td><td>Седан</td><td>Германия</td><td>задний</td><td>184</td><td>6.8</td><td>4500000</td><td>4.7</td></tr>
+    <tr><td>Mercedes C-Class</td><td>Седан</td><td>Германия</td><td>задний</td><td>204</td><td>7.0</td><td>4800000</td><td>4.8</td></tr>
+    <tr><td>Audi A4</td><td>Седан</td><td>Германия</td><td>полный</td><td>190</td><td>6.9</td><td>4200000</td><td>4.7</td></tr>
+    <tr><td>Ford Focus</td><td>Хэтчбек</td><td>США</td><td>передний</td><td>125</td><td>6.3</td><td>1800000</td><td>4.3</td></tr>
+    <tr><td>Chevrolet Cruze</td><td>Седан</td><td>США</td><td>передний</td><td>153</td><td>7.1</td><td>1600000</td><td>4.2</td></tr>
+    <tr><td>Lada Vesta</td><td>Седан</td><td>Россия</td><td>передний</td><td>106</td><td>7.8</td><td>1100000</td><td>4.1</td></tr>
+    <tr><td>Lada Granta</td><td>Седан</td><td>Россия</td><td>передний</td><td>90</td><td>7.5</td><td>800000</td><td>4.0</td></tr>
+    <tr><td>Renault Duster</td><td>Внедорожник</td><td>Франция</td><td>полный</td><td>114</td><td>7.2</td><td>1500000</td><td>4.3</td></tr>
+    <tr><td>Peugeot 308</td><td>Хэтчбек</td><td>Франция</td><td>передний</td><td>130</td><td>5.8</td><td>2200000</td><td>4.4</td></tr>
+    <tr><td>Fiat 500</td><td>Хэтчбек</td><td>Италия</td><td>передний</td><td>69</td><td>4.9</td><td>1700000</td><td>4.2</td></tr>
+    <tr><td>Lexus RX</td><td>Кроссовер</td><td>Япония</td><td>полный</td><td>295</td><td>8.5</td><td>5500000</td><td>4.8</td></tr>
+    <tr><td>Infiniti Q50</td><td>Седан</td><td>Япония</td><td>задний</td><td>208</td><td>8.1</td><td>3800000</td><td>4.6</td></tr>
+    <tr><td>Subaru Forester</td><td>Кроссовер</td><td>Япония</td><td>полный</td><td>150</td><td>7.6</td><td>2900000</td><td>4.5</td></tr>
+    <tr><td>Mitsubishi Outlander</td><td>Кроссовер</td><td>Япония</td><td>полный</td><td>146</td><td>7.4</td><td>2600000</td><td>4.4</td></tr>
+    <tr><td>Volvo XC60</td><td>Кроссовер</td><td>Швеция</td><td>полный</td><td>250</td><td>8.2</td><td>4200000</td><td>4.7</td></tr>
+    <tr><td>Jeep Grand Cherokee</td><td>Внедорожник</td><td>США</td><td>полный</td><td>294</td><td>10.5</td><td>5200000</td><td>4.6</td></tr>
+    <tr><td>Land Rover Discovery</td><td>Внедорожник</td><td>Великобритания</td><td>полный</td><td>340</td><td>9.8</td><td>6200000</td><td>4.7</td></tr>
+    <tr><td>Porsche Cayenne</td><td>Внедорожник</td><td>Германия</td><td>полный</td><td>340</td><td>9.7</td><td>6800000</td><td>4.9</td></tr>
+    <tr><td>Tesla Model 3</td><td>Седан</td><td>США</td><td>полный</td><td>283</td><td>14.0</td><td>3900000</td><td>4.8</td></tr>
+    <tr><td>Hyundai Tucson</td><td>Кроссовер</td><td>Корея</td><td>передний</td><td>150</td><td>7.3</td><td>2400000</td><td>4.5</td></tr>
+    <tr><td>Kia Sportage</td><td>Кроссовер</td><td>Корея</td><td>передний</td><td>150</td><td>7.4</td><td>2300000</td><td>4.5</td></tr>
+    <tr><td>BMW X5</td><td>Внедорожник</td><td>Германия</td><td>полный</td><td>340</td><td>9.2</td><td>7200000</td><td>4.8</td></tr>
+    <tr><td>Mercedes GLE</td><td>Внедорожник</td><td>Германия</td><td>полный</td><td>367</td><td>9.5</td><td>7500000</td><td>4.8</td></tr>
+    <tr><td>Audi Q7</td><td>Внедорожник</td><td>Германия</td><td>полный</td><td>340</td><td>9.3</td><td>5800000</td><td>4.7</td></tr>
+    <tr><td>Volkswagen Tiguan</td><td>Кроссовер</td><td>Германия</td><td>передний</td><td>150</td><td>7.1</td><td>2700000</td><td>4.5</td></tr>
+    <tr><td>Skoda Kodiaq</td><td>Кроссовер</td><td>Чехия</td><td>полный</td><td>150</td><td>7.6</td><td>2900000</td><td>4.5</td></tr>
+    <tr><td>Toyota RAV4</td><td>Кроссовер</td><td>Япония</td><td>полный</td><td>203</td><td>6.8</td><td>3000000</td><td>4.7</td></tr>
+    <tr><td>Nissan X-Trail</td><td>Кроссовер</td><td>Япония</td><td>полный</td><td>171</td><td>7.5</td><td>2800000</td><td>4.5</td></tr>
+    <tr><td>Honda CR-V</td><td>Кроссовер</td><td>Япония</td><td>полный</td><td>190</td><td>7.3</td><td>3200000</td><td>4.6</td></tr>
+    <tr><td>Mazda 6</td><td>Седан</td><td>Япония</td><td>передний</td><td>194</td><td>7.0</td><td>2600000</td><td>4.6</td></tr>
+    <tr><td>Subaru Impreza</td><td>Хэтчбек</td><td>Япония</td><td>полный</td><td>152</td><td>7.2</td><td>1900000</td><td>4.4</td></tr>
+    <tr><td>Mitsubishi Lancer</td><td>Седан</td><td>Япония</td><td>передний</td><td>117</td><td>6.9</td><td>1600000</td><td>4.3</td></tr>
+    <tr><td>Ford Mustang</td><td>Купе</td><td>США</td><td>задний</td><td>450</td><td>12.5</td><td>4500000</td><td>4.7</td></tr>
+    <tr><td>Chevrolet Camaro</td><td>Купе</td><td>США</td><td>задний</td><td>335</td><td>11.8</td><td>4200000</td><td>4.6</td></tr>
+    <tr><td>BMW 5 Series</td><td>Седан</td><td>Германия</td><td>задний</td><td>249</td><td>7.5</td><td>5200000</td><td>4.8</td></tr>
+    <tr><td>Mercedes E-Class</td><td>Седан</td><td>Германия</td><td>задний</td><td>258</td><td>7.6</td><td>5500000</td><td>4.8</td></tr>
+    <tr><td>Audi A6</td><td>Седан</td><td>Германия</td><td>полный</td><td>245</td><td>7.4</td><td>4800000</td><td>4.7</td></tr>
+    <tr><td>Volvo S90</td><td>Седан</td><td>Швеция</td><td>передний</td><td>250</td><td>7.3</td><td>3800000</td><td>4.6</td></tr>
+  </table>
+
+  <hr width="100%" size="2" color="gray">
+
+  <p align="center">
+    Группа: Б9123-09.03.04(3) | Разработчик: Панухник А. А.
+  </p>
+
+</body>
+</html>
