@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор прямоугольной трапеции</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор прямоугольной трапеции</h1>
+
+        <div class="input-type-selector">
+            <label>Тип входных данных:</label>
+            <select id="dataType">
+                <option value="side">Основания и боковая сторона (d)</option>
+                <option value="angle">Основания и угол (α)</option>
+            </select>
+            <button type="button" id="showButton">Показать</button>
+        </div>
+
+        <div class="image-container">
+            <img id="trapezoidImage" src="images/trapezoid_side.png" alt="Трапеция">
+        </div>
+
+        <form id="calcForm">
+            <div class="input-fields">
+                <div class="input-group">
+                    <label>Верхнее основание (a):</label>
+                    <input type="number" id="a" name="a" min="0" step="any">
+                    <div class="error-message" id="errorA"></div>
+                </div>
+                <div class="input-group">
+                    <label>Нижнее основание (b):</label>
+                    <input type="number" id="b" name="b" min="0" step="any">
+                    <div class="error-message" id="errorB"></div>
+                </div>
+                <div class="input-group" id="dInputGroup">
+                    <label>Боковая сторона (d):</label>
+                    <input type="number" id="d" name="d" min="0" step="any">
+                    <div class="error-message" id="errorD"></div>
+                </div>
+                <div class="input-group hidden" id="angleInputGroup">
+                    <label>Угол α (в градусах):</label>
+                    <input type="number" id="alpha" name="alpha" min="0" max="89.999" step="any">
+                    <div class="error-message" id="errorAlpha"></div>
+                </div>
+            </div>
+
+            <div class="calc-options">
+                <label id="calcOptionsLabel" class="calc-label">Вычислить:</label>
+                <select id="calcOptions" multiple size="3">
+                    <option value="height">Высоту (h)</option>
+                    <option value="area">Площадь (S)</option>
+                    <option value="perimeter">Периметр (P)</option>
+                </select>
+                <div class="error-message" id="errorOptions"></div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" id="calculateButton">Вычислить</button>
+                <button type="button" id="clearButton">Очистить</button>
+            </div>
+        </form>
+
+        <div class="output-section">
+            <h2>Результаты:</h2>
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
