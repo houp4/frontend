@@ -1,0 +1,122 @@
+extends template
+
+block nav
+  nav
+    +createMenu(dictMenu, 'Главная')
+
+block content
+  div.images
+    .left-column
+      .block.block1.hover-overlay.hover-zoom.hover-shadow
+        a(href="building.html")
+          img(src=require("../images/" + listImages[0]) alt="Изображение 1")
+      .block2-container
+        .block.block2-part1.hover-overlay.hover-zoom.hover-shadow
+          a(href="building.html")
+            img(src=require("../images/" + listImages[0]) alt="Изображение 2")
+        .block.block2-part2.hover-overlay.hover-zoom.hover-shadow
+          a(href="building.html")
+            img(src=require("../images/" + listImages[2]) alt="Изображение 3")
+    .right-column
+      .block.block4.hover-overlay.hover-zoom.hover-shadow
+        a(href="building.html")
+          img(src=require("../images/" + listImages[1]) alt="Изображение 4")
+      .block.block5.hover-overlay.hover-zoom.hover-shadow
+        a(href="building.html")
+          img(src=require("../images/" + listImages[2]) alt="Изображение 5")
+      .block.block3.hover-overlay.hover-zoom.hover-shadow
+        a(href="building.html")
+          img(src=require("../images/" + listImages[1]) alt="Изображение 6")
+  
+  article
+    .container-block
+      .container_circles
+        .item
+          .circle
+            img(src=require("../images/image4.jpg") alt="Арсенал")
+          .title ФК Арсенал
+          .text Англия
+          a.link_circle(href="arsenal_page_3laba.html") подробнее
+        .item
+          .circle
+            img(src=require("../images/image5.jpg") alt="Манчестер Юнайтед")
+          .title ФК Манчестер Юнайтед
+          .text Англия
+          a.link_circle(href="#") подробнее
+        .item
+          .circle
+            img(src=require("../images/image6.jpg") alt="ПСЖ")
+          .title ФК ПСЖ
+          .text Франция
+          a.link_circle(href="#") подробнее
+        .item
+          .circle
+            img(src=require("../images/image7.jpg") alt="Бавария Мюнхен")
+          .title ФК Бавария Мюнхен
+          .text Германия
+          a.link_circle(href="#") подробнее
+        .item
+          .circle
+            img(src=require("../images/image8.jpg") alt="Ювентус")
+          .title ФК Ювентус
+          .text Италия
+          a.link_circle(href="#") подробнее
+
+
+    .container-block
+      .club-block
+        .club-image
+          img(src=require("../images/image9.jpg") alt="Интер Милан")
+        .club-text
+          h2 Интер Милан
+          ol
+            li
+              span Основан:
+              label 9 марта 1908 года, Милан, Италия.
+            li
+              span Прозвища:
+              label «Нерадзурри» (Чёрно-синие), «Баусча» (Змеи).
+            li
+              span Домашний стадион:
+              label «Джузеппе Меацца» (также известен как «Сан-Сиро»).
+          a.link(href="#") подробнее
+    .container-block
+      .block3-content
+        .block3-header
+          h2 Атлетико Мадрид
+        .block3-main
+          .block3-text-left
+            p Атлетико Мадрид — один из самых титулованных клубов Испании, известный своей сильной обороной и боевым характером. Под руководством Диего Симеоне команда неоднократно выигрывала Ла Лигу и достигала финалов Лиги Чемпионов.
+          .block3-image
+            img(src=require("../images/image11.jpg") alt="Эмблема Антлетико Мадрид")
+          .block3-text-right
+            .block3-text-content
+              ol
+                li
+                  span Основан:
+                  label 26 апреля 1903 года, Мадрид, Испания.
+                li
+                  span Прозвища:
+                  label «Матрасники», «Красно-белые», «Индиос».
+                li
+                  span Домашний стадион:
+                  label «Метрополитано» (с 2017 года).
+            .link
+              a(href="#") подробнее
+    .container-block
+      .club-block
+        .club-image
+          img(src=require("../images/image10.jpg") alt="Милан")
+        .club-text
+          h2 Милан
+          ol
+            li
+              span Основан:
+              label 16 декабря 1899 года, Милан, Италия.
+            li
+              span Прозвища:
+              label «Россонери» (Красно-чёрные), «Дьяволы».
+            li
+              span Домашний стадион:
+              label «Джузеппе Меацца» (также известен как «Сан-Сиро»).
+          a.link(href="#") подробнее
