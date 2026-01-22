@@ -1,0 +1,370 @@
+nav
+  text-align right
+  margin-bottom: 2%
+  background-color #7c7b7bff
+
+  & a
+    display inline-block
+    padding 1%
+    color: #ffffff
+    text-decoration: none
+        
+    &:hover
+    &.active
+      background-color #288a23ff
+
+
+
+div.images
+  display flex
+  width: 90%
+  margin: 0 auto
+  height: 600px
+
+  .hover-overlay
+    position relative
+    overflow hidden
+
+  .hover-zoom img
+    transition transform 0.3s ease
+
+  .hover-zoom:hover img
+    transform scale(1.05)
+		
+  .left-column
+    display flex
+    flex-direction column
+    width: 50%
+    
+    .block1
+      height: 50%
+      overflow hidden
+      
+    .block2-container
+      display flex
+      height: 50%
+      
+      .block2-part1, .block2-part2
+        width: 50%
+        overflow hidden
+  
+  .right-column
+    display flex
+    flex-direction column
+    width: 50%
+    
+    .block3, .block4, .block5
+      height: 33.333%
+      overflow hidden
+  
+  .block
+    overflow hidden
+    
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display block
+
+article
+  width: 90%
+  margin: 30px auto
+  display: flex
+  flex-wrap: wrap
+  
+  .container-block:nth-child(1),
+  .container-block:nth-child(3)
+    flex: 0 0 70%
+    overflow: hidden
+
+  .container-block:nth-child(2),
+  .container-block:nth-child(4)
+    flex: 0 0 30%
+    overflow: hidden
+
+  .club-block
+    width: 100%
+    overflow: hidden
+    height: 100%
+    display: flex
+    
+    .container-block:nth-child(1) &,
+    .container-block:nth-child(3) &
+      flex-direction: row
+    
+    .container-block:nth-child(2) &,
+    .container-block:nth-child(4) &
+      flex-direction: row-reverse
+      border-left: 1px solid #000000
+
+    .club-image
+      width: 35%
+      height: 100%
+      overflow: hidden
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    .club-text
+      padding: 25px
+      flex: 1
+      display: flex
+      flex-direction: column
+
+      h2
+        margin-top: 0
+        text-align: right
+
+      ol
+        padding-left: 20px
+        flex: 1
+
+      li
+        margin-bottom: 10px
+        span
+          font-weight: bold
+
+    .link
+      margin-top: auto
+      padding: 10px 20px
+      margin-left: auto
+      text-decoration: none
+      color: #000
+
+  .container_circles
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    column-gap: 8%
+    align-items: flex-start
+
+  .item
+    flex: 0 0 10%
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+  .circle
+    width: 80%
+    max-width: 150px
+    max-height: 150px
+    border-radius: 50%
+    overflow: hidden
+    margin: 3.5% auto
+    border: 2px solid #ccc
+    display: flex
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  .title
+    font-weight: bold
+    margin-bottom: 5px
+    font-size: 20px
+
+  .text
+    font-size: 15px
+    color: #000000
+    margin-bottom: 10%
+
+  .link_circle
+    border-radius: 10%
+    border: 3px solid #3e3e3e
+    padding: 8px 12px
+    color: white
+    background-color: #3e3e3e
+    text-decoration: none
+    display: inline-block
+
+  .container-block:nth-child(3)
+    flex: 70%
+
+  .block3-content
+    display: flex
+    flex-direction: column
+    height: 100%
+
+  .block3-header
+    text-align: center
+
+  .block3-main
+    display: flex
+    align-items: center
+    flex: 1
+
+  .block3-text-left,
+  .block3-text-right
+    flex: 1
+    line-height: 1.6
+    max-width: 35%
+
+  .block3-text-left
+    text-align: left
+
+  .block3-text-right
+    text-align: left
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  .block3-image
+    flex: 200px
+    height: 100%
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+footer
+  background-color #7c7b7bff
+  margin-top 2%
+  padding 1.5%
+  
+  & h4
+    margin 0
+    color white
+    font-size 1em
+    font-weight bold
+    opacity 0.8
+    text-align center
+
+
+img.big
+  display block
+  margin 2% auto
+
+section
+  max-width 80%
+  margin 2% auto
+  display grid
+  grid-gap 4%
+  
+  & p
+    line-height 1.6
+
+    &:first-child
+      grid-column 1
+      
+    &:last-child
+      grid-column 2
+
+table_club
+  width: 90%
+  margin: 20px auto
+  display: block
+  
+  table
+    width: 100%
+    border: 1px solid #000
+    
+    th
+      background-color: #727070
+      color: white
+      padding: 10px
+      text-align: center
+      font-weight: bold
+      border: 1px solid #000
+    
+    td
+      padding: 8px
+      text-align: center
+      border: 1px solid #000
+      color: colorText
+
+
+
+
+
+
+@media (max-width: 768px)
+  div.images
+    flex-direction column
+    height auto
+    width: 100%
+    
+    .left-column,
+    .right-column
+      width: 100%
+      
+    .left-column
+      .block1
+        height: 300px
+        
+      .block2-container
+        height: 300px
+        
+    .right-column
+      .block3,
+      .block4,
+      .block5
+        height: 200px
+  
+  article
+    width: 100%
+    flex-direction: column
+    
+    .container-block:nth-child(1),
+    .container-block:nth-child(2),
+    .container-block:nth-child(3),
+    .container-block:nth-child(4)
+      flex: 0 0 100%
+      width: 100%
+    
+    .club-block
+      flex-direction: column !important
+      height: auto
+      
+      .container-block:nth-child(2) &,
+      .container-block:nth-child(4) &
+        border-left: none
+        border-top: 1px solid #000000
+      
+      .club-image
+        width: 100%
+        height: 300px
+      
+      .club-text
+        h2
+          text-align: center
+    
+    .container_circles
+      flex-direction: column
+      align-items: center
+      
+      .item
+        flex: 0 0 100%
+        width: 80%
+        margin-bottom: 30px
+    
+    .block3-main
+      flex-direction: column
+      
+      .block3-text-left,
+      .block3-text-right,
+      .block3-image
+        max-width: 100%
+        width: 100%
+      
+      .block3-image
+        height: 300px
+        margin: 20px 0
+  
+  nav a
+    text-align center
+    margin 5px 0
+    padding 10px
+  
+  img.big
+    max-width 80%
+    margin 3% auto
+  
+  section
+    max-width 90%
+    display block

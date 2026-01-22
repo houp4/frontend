@@ -1,0 +1,96 @@
+block variables
+	-
+		var dictMenu = {'Главная': 'index.html', 
+				'Самые сильные футбольные клубы' : "table.html"
+		}
+		
+	- var listImages = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image5.jpg']
+
+	- 
+		var structures = [
+			{
+			menuItem: "ФК Арсенал",
+			pict: "image1_big.jpg",
+			firstP: `«Арсена́л» — легендарный английский футбольный клуб из Лондона, основанный в 1886 году. Клуб получил своё название от оружейного завода Royal Arsenal, где работали его основатели. «Арсенал» является одним из самых титулованных клубов Англии с богатой историей и традициями.`,
+			secondP: `За свою историю «Арсенал» 13 раз становился чемпионом Англии, 14 раз выигрывал Кубок Англии и дважды — Кубок обладателей кубков. Золотая эра клуба связана с именем французского тренера Арсена Венгера, который руководил командой 22 года (1996-2018). Под его руководством «Арсенал» в сезоне 2003/2004 установил уникальное достижение — выиграл чемпионат Англии, не потерпев ни одного поражения («Непобедимые»). Домашний стадион клуба — «Эмирейтс» на 60 704 мест, куда команда переехала в 2006 году.`
+			}
+		]
+
+	- 
+		var footballClubs = [
+			{name: "Реал Мадрид", country: "Испания", year: 1902, academy: 3, clSeasons: 32, titles: 35, capacity: 81.044},
+			{name: "Барселона", country: "Испания", year: 1899, academy: 5, clSeasons: 31, titles: 27, capacity: 99.354},
+			{name: "Бавария", country: "Германия", year: 1900, academy: 4, clSeasons: 28, titles: 33, capacity: 75.000},
+			{name: "Бенфика", country: "Португалия", year: 1904, academy: 6, clSeasons: 27, titles: 38, capacity: 64.642},
+			{name: "Порту", country: "Португалия", year: 1893, academy: 4, clSeasons: 26, titles: 30, capacity: 50.033},
+			{name: "Аякс", country: "Нидерланды", year: 1900, academy: 8, clSeasons: 25, titles: 36, capacity: 55.865},
+			{name: "Ювентус", country: "Италия", year: 1897, academy: 3, clSeasons: 24, titles: 36, capacity: 41.507},
+			{name: "Милан", country: "Италия", year: 1899, academy: 2, clSeasons: 24, titles: 19, capacity: 80.018},
+			{name: "Олимпиакос", country: "Греция", year: 1925, academy: 4, clSeasons: 23, titles: 47, capacity: 32.115},
+			{name: "Динамо Киев", country: "Украина", year: 1927, academy: 6, clSeasons: 22, titles: 16, capacity: 70.050},
+			{name: "Селтик", country: "Шотландия", year: 1887, academy: 7, clSeasons: 21, titles: 53, capacity: 60.411},
+			{name: "Манчестер Юнайтед", country: "Англия", year: 1878, academy: 2, clSeasons: 20, titles: 20, capacity: 74.310},
+			{name: "ПСВ", country: "Нидерланды", year: 1913, academy: 5, clSeasons: 20, titles: 24, capacity: 35.000},
+			{name: "Галатасарай", country: "Турция", year: 1905, academy: 3, clSeasons: 19, titles: 23, capacity: 52.652},
+			{name: "Рейнджерс", country: "Шотландия", year: 1872, academy: 6, clSeasons: 18, titles: 55, capacity: 51.082},
+			{name: "Ливерпуль", country: "Англия", year: 1892, academy: 3, clSeasons: 17, titles: 19, capacity: 53.394},
+			{name: "Интер", country: "Италия", year: 1908, academy: 3, clSeasons: 17, titles: 20, capacity: 80.018},
+			{name: "Олимпик Марсель", country: "Франция", year: 1899, academy: 2, clSeasons: 16, titles: 9, capacity: 67.394},
+			{name: "Шахтер Донецк", country: "Украина", year: 1936, academy: 3, clSeasons: 16, titles: 13, capacity: 52.667},
+			{name: "Арсенал", country: "Англия", year: 1886, academy: 4, clSeasons: 15, titles: 13, capacity: 60.704},
+			{name: "Валенсия", country: "Испания", year: 1919, academy: 4, clSeasons: 15, titles: 6, capacity: 49.430},
+			{name: "Олимпик Лион", country: "Франция", year: 1950, academy: 5, clSeasons: 15, titles: 7, capacity: 59.186},
+			{name: "Боруссия Дортмунд", country: "Германия", year: 1909, academy: 5, clSeasons: 15, titles: 8, capacity: 81.365},
+			{name: "Атлетико Мадрид", country: "Испания", year: 1903, academy: 2, clSeasons: 14, titles: 11, capacity: 68.456},
+			{name: "Челси", country: "Англия", year: 1905, academy: 2, clSeasons: 14, titles: 6, capacity: 40.343},
+			{name: "Манчестер Сити", country: "Англия", year: 1880, academy: 1, clSeasons: 13, titles: 9, capacity: 53.400},
+			{name: "ПСЖ", country: "Франция", year: 1970, academy: 1, clSeasons: 13, titles: 11, capacity: 47.929},
+			{name: "Байер Леверкузен", country: "Германия", year: 1904, academy: 4, clSeasons: 12, titles: 1, capacity: 30.210},
+			{name: "ЦСКА Москва", country: "Россия", year: 1911, academy: 5, clSeasons: 12, titles: 6, capacity: 30.457},
+			{name: "Спартак Москва", country: "Россия", year: 1922, academy: 3, clSeasons: 12, titles: 10, capacity: 45.360},
+			{name: "Рома", country: "Италия", year: 1927, academy: 4, clSeasons: 11, titles: 3, capacity: 72.698},
+			{name: "Фенербахче", country: "Турция", year: 1907, academy: 2, clSeasons: 11, titles: 19, capacity: 50.530},
+			{name: "Зенит", country: "Россия", year: 1925, academy: 2, clSeasons: 10, titles: 8, capacity: 68.134},
+			{name: "Наполи", country: "Италия", year: 1926, academy: 3, clSeasons: 10, titles: 3, capacity: 54.726},
+			{name: "Спортинг", country: "Португалия", year: 1906, academy: 7, clSeasons: 10, titles: 19, capacity: 50.095},
+			{name: "Боруссия Мёнхенгладбах", country: "Германия", year: 1900, academy: 4, clSeasons: 9, titles: 5, capacity: 54.057},
+			{name: "Атлетик Бильбао", country: "Испания", year: 1898, academy: 9, clSeasons: 8, titles: 8, capacity: 53.289},
+			{name: "Шальке 04", country: "Германия", year: 1904, academy: 3, clSeasons: 8, titles: 7, capacity: 62.271},
+			{name: "Тоттенхэм", country: "Англия", year: 1882, academy: 2, clSeasons: 7, titles: 2, capacity: 62.850},
+			{name: "Бешикташ", country: "Турция", year: 1903, academy: 3, clSeasons: 7, titles: 16, capacity: 41.903},
+			{name: "Фейеноорд", country: "Нидерланды", year: 1908, academy: 6, clSeasons: 7, titles: 16, capacity: 51.117},
+			{name: "Севилья", country: "Испания", year: 1890, academy: 3, clSeasons: 6, titles: 1, capacity: 43.883},
+			{name: "РБ Лейпциг", country: "Германия", year: 2009, academy: 1, clSeasons: 5, titles: 0, capacity: 47.069},
+			{name: "Астон Вилла", country: "Англия", year: 1874, academy: 3, clSeasons: 5, titles: 7, capacity: 42.785},
+			{name: "Ньюкасл", country: "Англия", year: 1892, academy: 2, clSeasons: 4, titles: 4, capacity: 52.305},
+			{name: "Монако", country: "Франция", year: 1924, academy: 4, clSeasons: 4, titles: 8, capacity: 16.500},
+			{name: "Лилль", country: "Франция", year: 1944, academy: 5, clSeasons: 4, titles: 4, capacity: 50.186},
+			{name: "Лацио", country: "Италия", year: 1900, academy: 3, clSeasons: 3, titles: 2, capacity: 70.634},
+			{name: "Краснодар", country: "Россия", year: 2008, academy: 8, clSeasons: 3, titles: 0, capacity: 35.179},
+			{name: "Панатинаикос", country: "Греция", year: 1908, academy: 3, clSeasons: 3, titles: 20, capacity: 69.618}
+		]
+
+	- 
+		var sortOptions = [
+			{value: "0", text: "Нет"},
+			{value: "1", text: "Год основания"},
+			{value: "2", text: "Число воспитанников академии ФК"},
+			{value: "3", text: "Сезонов в ЛЧ"},
+			{value: "4", text: "Титулов в ЛЧ"},
+			{value: "5", text: "Вместимость домашнего стадиона"},
+			{value: "6", text: "Страна"}
+		]
+
+	- 
+		var graphOptions = [
+			{id: "c", value: "c", text: "Страна"},
+			{id: "y", value: "y", text: "Год основания"}
+		]
+
+	- 
+		var resultOptions = [
+			{id: "val", value: "0", text: "Максимальное количество титулов в Чемпионате"},
+			{id: "val1", value: "1", text: "Минимальное количество титулов в Чемпионате"},
+			{id: "val2", value: "2", text: "Максимальное количество сезонов в ЛЧ"},
+			{id: "val3", value: "3", text: "Минимальное количество сезонов в ЛЧ"}
+		]

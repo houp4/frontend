@@ -1,0 +1,126 @@
+extends template
+
+block header
+
+block nav
+  nav
+    +createMenu(dictMenu, 'Самые сильные футбольные клубы')
+
+block content
+  sort
+    details
+      summary График
+      form
+        label Значение по оси ОХ:
+        div
+          input(type="radio" name="type" id="c" value="c")
+          label(for="c") Страна
+        div
+          input(type="radio" name="type" id="y" value="y")
+          label(for="y") Год основания
+        
+        label Результат:
+        div
+          input(type="checkbox" id="val" value="0")
+          label(for="val") Максимальное количество титулов в Чемпионате
+        div
+          input(type="checkbox" id="val1" value="1")
+          label(for="val1") Минимальное количество титулов в Чемпионате
+        div
+          input(type="checkbox" id="val2" value="2")
+          label(for="val2") Максимальное количество сезонов в ЛЧ
+        div
+          input(type="checkbox" id="val3" value="3")
+          label(for="val3") Минимальное количество сезонов в ЛЧ
+        
+        input(type="button" value="Построить")
+
+    details
+      summary Фильтр
+      form
+        label(for="name") Название ФК:
+        input(type="text" id="name")
+        
+        label(for="country") Страна:
+        input(type="text" id="country")
+        
+        label(for="year") Основан:
+        input(type="number" id="year")
+        
+        label(for="academy") Воспитанников академии ФК в основе:
+        input(type="number" id="academy")
+        
+        label Сезонов в Лиге Чемпионов:
+        .range-inputs
+          input(type="number" id="liga" placeholder="от")
+          input(type="number" id="liga_max" placeholder="до")
+        
+        label Число титулов в Чемпионате:
+        .range-inputs
+          input(type="number" id="tituls" placeholder="от")
+          input(type="number" id="tituls_max" placeholder="до")
+        
+        label Вместимость домашнего стадиона:
+        .range-inputs
+          input(type="number" id="homestic_stadium" placeholder="от")
+          input(type="number" id="homestic_stadium_max" placeholder="до")
+        
+        input(type="button" value="Найти")
+
+    details
+      summary Сортировка
+      form
+        div
+          label Первый уровень:
+          select(name="sort")
+            each option in sortOptions
+              if option.value === "0"
+                option(value=option.value selected)= option.text
+              else
+                option(value=option.value)= option.text
+          input(type="checkbox" name="sorting" value="3")
+          label по убыванию?
+        
+        div
+          label Второй уровень:
+          select(name="sort")
+            each option in sortOptions
+              if option.value === "0"
+                option(value=option.value selected)= option.text
+              else
+                option(value=option.value)= option.text
+          input(type="checkbox" name="sorting" value="3")
+          label по убыванию?
+        
+        div
+          label Третий уровень:
+          select(name="sort")
+            each option in sortOptions
+              if option.value === "0"
+                option(value=option.value selected)= option.text
+              else
+                option(value=option.value)= option.text
+          input(type="checkbox" name="sorting" value="3")
+          label по убыванию?
+        
+        input(type="submit" value="Сортировать")
+
+  table_club
+    table
+      tr
+        th Название клуба
+        th Страна
+        th Год основания
+        th Число воспитанников академии ФК в основе
+        th Сезонов в ЛЧ
+        th Титулы Чемпионата
+        th Вместимость домашнего стадиона, тыс.чел
+      each club in footballClubs
+        tr
+          td= club.name
+          td= club.country
+          td= club.year
+          td= club.academy
+          td= club.clSeasons
+          td= club.titles
+          td= club.capacity
